@@ -1,0 +1,8 @@
+cpf_enviado,status_validacao,mensagem_retorno
+55956436093,Válido,CPF válido.
+823.353.220-79,Válido,CPF válido.
+16118665028,Válido,CPF válido.
+123.456.789-00,Inválido,CPF inválido.
+98765432198,Inválido,CPF inválido.
+111.111.111-11,Inválido,CPF inválido.
+374.550.660-07,Válido,CPF válido.
