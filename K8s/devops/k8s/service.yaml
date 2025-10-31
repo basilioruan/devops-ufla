@@ -1,0 +1,14 @@
+# Service Manifesto (k8s/service.yaml)
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-app-service
+spec:
+  # Seleciona todos os Pods que têm o label app: spring-app
+  selector:
+    app: spring-app
+  ports:
+    - protocol: TCP
+      port: 80       # A porta que o Service expõe no cluster
+      targetPort: 8080 # A porta que o container Spring Boot está escutando
+  type: ClusterIP   # Tipo padrão, acessível apenas dentro do cluster

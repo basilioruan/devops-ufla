@@ -1,0 +1,14 @@
+# Pod Manifesto (k8s/pod.yaml)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-app-pod
+  labels:
+    app: spring-app
+    component: api
+spec:
+  containers:
+    - name: spring-app-container
+      image: basilioruan/aula-devops:0.1.0
+      ports:
+        - containerPort: 8080

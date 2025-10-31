@@ -1,0 +1,23 @@
+# ReplicaSet Manifesto (k8s/replicaset.yaml)
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: spring-app-replicaset
+  labels:
+    app: spring-app
+spec:
+  # Número de cópias do Pod que você deseja rodando
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-app
+  template:
+    metadata:
+      labels:
+        app: spring-app
+    spec:
+      containers:
+        - name: spring-app-container
+          image: basilioruan/aula-devops:0.1.0
+          ports:
+            - containerPort: 8080
