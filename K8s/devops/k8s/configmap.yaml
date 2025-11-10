@@ -1,0 +1,13 @@
+# ConfigMap para dados não sensíveis
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  labels:
+    app: database-app
+data:
+  # Configurações compartilhadas entre Backend e PostgreSQL
+  DB_HOST: "postgres-service"
+  DB_PORT: "5432"
+  DB_NAME: "devops"
+  POSTGRES_DB: "devops"
